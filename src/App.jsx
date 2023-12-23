@@ -59,7 +59,7 @@ function App() {
       </div>
       
     
-      <div>
+      <div className="box">
       <table>
         <thead>
           <tr>

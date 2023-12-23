@@ -8,6 +8,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .btn-wrapper{
   display: flex;
@@ -40,18 +41,25 @@ input{
   background-color: transparent;
   border: none;
   text-align: center;
-  font-size: 16px;
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  font-family: sans-serif;
   outline: none;
 }
 
-
+.box{
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  max-width: 100%;
   margin-top: 20px;
+  font-size: 14px;
+  font-family: sans-serif;
 }
 
 th, td {
