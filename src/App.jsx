@@ -61,93 +61,94 @@ function App() {
     
       <div className="box">
       <table>
-        <thead>
-          <tr>
-            <th colSpan="6" contentEditable>SALARY CALCULATION SHEET FOR THE MONTH OF AUGUST 2023</th>
-          </tr>
-          <tr>
-            <th>SI</th>
-            <th colSpan="2">Daily Wage</th>
-            <th>Working days</th>
-            <th>Percentage</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td >Basic Wages</td>
-            <td className="inp"><input value={wage}  onChange={(e)=>setWage(e.target.value)} className="display" type="text" /></td>
-            <td className="inp"><input name="days" value={days}  onChange={(e)=>setDays(e.target.value)} className="display" type="text" /></td>
-            <td></td>
-            <td>{wage*days}</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td >ESIC</td>
-            <td >{Esi}</td>
-            <td>{days}</td>
-            <td>3.25%</td>
-            <td>{Esi*days}</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td >EPFD</td>
-            <td >{Epf}</td>
-            <td>{days}</td>
-            <td>12%</td>
-            <td>{Epf*days}</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td >EPF Admn</td>
-            <td >{Admin}</td>
-            <td>{days}</td>
-            <td>0.5%</td>
-            <td>{Admin*days}</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td >ELDI</td>
-            <td >{Eldi}</td>
-            <td>{days}</td>
-            <td>0.5%</td>
-            <td>{Eldi*days}</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td ><strong>TOTAL</strong></td>
-            <td ><strong>{Total}</strong></td>
-            <td>{days}</td>
-            <td></td>
-            <td><strong>{Total*days}</strong></td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td >GST</td>
-            <td >{Gst}</td>
-            <td>{days}</td>
-            <td>18%</td>
-            <td>{Gst*days}</td>
-          </tr>
-          <tr>  
-            <td>8</td>
-            <td >Service Charge</td>
-            <td >{Service}</td>
-            <td>{days}</td>
-            <td className="inp"><input name="days" value={servicePer}  onChange={(e)=>setServicePer(e.target.value)} className="display" type="text" /></td>
-            <td>{Service*days}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td ><strong>TOTAL</strong></td>
-            <td ></td>
-            <td></td>
-            <td></td>
-            <td><strong>{Net*days}</strong></td>
-          </tr>
-        </tbody>
-      </table>
+  <thead>
+    <tr>
+      <th colSpan="6" contentEditable>SALARY CALCULATION SHEET FOR THE MONTH OF AUGUST 2023</th>
+    </tr>
+    <tr>
+      <th>SI</th>
+      <th colSpan="2">Daily Wage</th>
+      <th>Working days</th>
+      <th>Percentage</th>
+      <th>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Basic Wages</td>
+      <td className="inp"><input value={wage} onChange={(e) => setWage(e.target.value)} className="display" type="text" /></td>
+      <td className="inp"><input name="days" value={days} onChange={(e) => setDays(e.target.value)} className="display" type="text" /></td>
+      <td></td>
+      <td>{(wage * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>ESIC</td>
+      <td>{Esi.toFixed(2)}</td>
+      <td>{days}</td>
+      <td>3.25%</td>
+      <td>{(Esi * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>EPFD</td>
+      <td>{Epf.toFixed(2)}</td>
+      <td>{days}</td>
+      <td>12%</td>
+      <td>{(Epf * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>EPF Admn</td>
+      <td>{Admin.toFixed(2)}</td>
+      <td>{days}</td>
+      <td>0.5%</td>
+      <td>{(Admin * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>ELDI</td>
+      <td>{Eldi.toFixed(2)}</td>
+      <td>{days}</td>
+      <td>0.5%</td>
+      <td>{(Eldi * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><strong>TOTAL</strong></td>
+      <td><strong></strong></td>
+      <td>{days}</td>
+      <td></td>
+      <td><strong>{(Total * days).toFixed(2)}</strong></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>GST</td>
+      <td>{Gst.toFixed(2)}</td>
+      <td>{days}</td>
+      <td>18%</td>
+      <td>{(Gst * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Service Charge</td>
+      <td>{Service.toFixed(2)}</td>
+      <td>{days}</td>
+      <td className="inp serv"><input name="days" value={servicePer} onChange={(e) => setServicePer(e.target.value)} className="display" type="text" /></td>
+      <td>{(Service * days).toFixed(2)}</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><strong>TOTAL</strong></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><strong>{(Net * days).toFixed(2)}</strong></td>
+    </tr>
+  </tbody>
+</table>
+
     </div>
     </>
   );
