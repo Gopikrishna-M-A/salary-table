@@ -117,7 +117,7 @@ function App() {
     <tr>
       <td>6</td>
       <td><strong>TOTAL</strong></td>
-      <td><strong></strong></td>
+      <td><strong>{Total}</strong></td>
       <td>{days}</td>
       <td></td>
       <td><strong>{(Total * days).toFixed(2)}</strong></td>
